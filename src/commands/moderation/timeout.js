@@ -3,7 +3,8 @@ const ms = require('ms');
 const devOnly = require('../../validations/dev-only');
 
 module.exports = {
-
+  devOnly,
+  deleted: true,
   data: new SlashCommandBuilder()
     .setName("timeout")
     .setDescription("Timeout a user")
@@ -94,5 +95,4 @@ module.exports = {
   },
   permissionsRequired: [PermissionFlagsBits.MuteMembers],
   botPermission: [PermissionFlagsBits.MuteMembers],
-  devOnly,
 }
